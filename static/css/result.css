@@ -1,0 +1,46 @@
+.sub-info{
+    color: #32394d;
+    font-size: x-large;
+    font-weight: 900;
+    padding: 2% 2% 2% 3%;
+}
+.result-style{
+    padding: 2% 5% 2% 5%;
+    border: none;
+}
+.result-card{
+    border: 2px solid black;
+    padding: 1% 2% 2% 2%;
+}
+.result-title{
+    font-family: 'Courier New';
+    font-weight: bolder;
+    text-decoration: underline;
+    padding: 1% 2% 2% 2%;
+}
+
+.pdf-style{
+    font-family: 'Courier New';
+    
+}
+.pages-style{
+    font-family: 'Courier New';
+    font-weight: bolder;
+    
+}
+.right-style{
+   position: absolute;
+   right: 8%;
+}
+.Advocates{
+    font-family: 'Courier New';
+    font-weight: bolder;
+    padding-left: 20px;
+}
+.judges{
+    font-family: 'Courier New';
+    font-weight: bolder;
+    padding-left: 20px;
+}
+
+

@@ -1,0 +1,395 @@
+body{
+    background-color: #FAFAFA;
+}
+
+.container-home{
+    /* background: linear-gradient(to bottom right,#2D3D66,#323848 ); */
+    background-color: #FAFAFA;
+}
+
+/*===================================================NAVIGATION BAR ==============================================================*/
+.navigation-bar{
+    display: flex;
+    color: #32394D;
+    padding: 5% 8% 2% 8%;
+    flex-flow: row wrap;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+/* -----------------------------------------NAV BAR-----------------------------------*/
+/*------------------------------- HOME ------------------------------------------*/
+.nav-bar{
+    width: 10%;
+}
+.home{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+   background-color: #323848;
+
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+
+    display: flex;
+}
+.navigation{
+    overflow-y: scroll;
+}
+.navigation::-webkit-scrollbar{
+    display: none;
+}
+.navigation ul li a{
+    padding: 8px 32px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.navigation li{
+    text-align: right;
+    display: inline-block;
+    list-style-type: none;
+}
+.navigation hr{
+    border-top: 1px solid white;
+}
+.navigation a:hover{
+    color: #4968be;
+}
+.home .closebtn{
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 10px;
+    text-decoration-line: none;
+}
+.material-icons{
+    padding-left: 15px;
+}
+#main{
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+@media screen and (max-height:450px) {
+    .home{padding-top: 15px;}
+    .home a{font-size: 18px;}
+}
+/*--------------------------------HOME INTERIOR---------------------------------*/
+/*----------------------------------Account-------------------------------*/
+.home-account{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    border-bottom: 1px solid white;
+}
+.home-account a{
+    color: white;
+    text-decoration: none;
+}
+.home-account a:hover{
+    text-decoration: none;
+}
+.home-account-img img{
+    width: 60px;
+    height: 60px;
+}
+
+.logo-nav{
+    color: white;
+    font-family: Segoe Print;
+    font-size: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    width: 160px;
+}
+
+/*------------------------------------------MENU--------------------------------*/
+.menu-logo img{
+    height: 40px;
+    width: 52px;
+}
+/*------------------------------------------LOGO_NAME--------------------------------*/
+.logo-name{
+    font-size: 30px;
+    font-family: Segoe Print;
+    width: 20%;
+}
+.logo-name a{
+    text-decoration: none;
+}
+/*------------------------------------------SEARCH BAR--------------------------------*/
+.search-bar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+.search-bar form{
+    width: 100%;
+}
+.search-input input[type=text]{
+    background-color: white;
+    border: 3px solid #32394D;
+    color: #9399A9;
+    font-size: 16px;
+    height: 40px;
+    width: 90%;
+    padding: 0px 3% 0px 3%;
+    border-radius: 30px;
+}
+.search-button{
+    background-color: #FAFAFA;
+    border: none;
+}
+.input-position{
+    float: left;
+    width: 80%;
+}
+.search-position{
+    float: left;
+    width: 10%;
+}
+.search-icon i{ 
+    font-size: 22px;
+    color: #32394D;
+    padding-top: 2%;
+}
+/*------------------------------------------FILTER--------------------------------*/
+.filter select{
+   
+    padding: 10px;
+    /* padding-right: 0px; */
+    width: 70px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    background-color: white;
+    color: #32394D;
+    border: 2px solid #32394D;
+}
+/*------------------------------------------USER--------------------------------*/
+.user{
+    width: 10%;
+}
+.user img{
+    height: 30px;
+    width:30px ;
+   
+}
+/*================================================================INTRO=======================================================================*/
+.container-intro{
+    padding: 60px 10% 50px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-content p{
+    margin: 0px;
+}
+.intro-qoute{
+    width: 400px;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    font-size: 51px;
+    font-family: Franklin Gothic;
+    color: #32394D;
+}
+.intro-text{
+    width: 400px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #9399A9;
+}
+.intro-button input{
+    width:200px;
+    height: 50px;
+    border: 3px solid #EE9F1B;
+    background-color: transparent;
+    color: #32394D;
+    font-weight: 600;
+}
+/*----------------------------------------------------------INTRO_IMAGE----------------------------*/
+.intro-image img{
+    height: 400px;
+    width: 400px;
+}
+
+/*================================================================NEWS=======================================================================*/
+.container-news{
+    padding: 50px 10% 50px 10%;
+    display: flex;
+    gap: 15%;
+    background-color: #323848;
+}
+.news-content{
+    margin: 3% 0px 3% 0px;
+}
+
+.news-title{
+    width: 400px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: Franklin Gothic;
+    font-weight: 600;
+    color: white;
+}
+.news-text{
+    width: 400px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #9399A9;
+}
+.news-button a{
+    width:200px;
+    height: 50px;
+    background-color: transparent;
+    color: #EE9F1B;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/*================================================================CATEGORIES====================================================================*/
+.categories{
+    margin: 8% 10% 8% 10%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    row-gap: 30px;
+}
+.categories-style{
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #707070;
+    padding: 15px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+.categories-style span{
+    font-family: Arial;
+    font-weight: 600;
+    color: #323848;
+}
+.categories-style img{
+    margin: 15%;
+    width: 100px;
+    height: 100px;
+}
+/*================================================================Q and A====================================================================*/
+
+.QandA{
+    background-color: #323848;
+    padding: 5%;
+    color: white;
+}
+.QandA p{
+    margin-top: 0px;
+}
+.QandA-content{
+    background-color: white;
+    color: #323848;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 15px 10px #000000;
+
+}
+.QandA-question{
+    padding: 20px 0px 5px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    
+}
+.QandA-text{
+    padding: 10px 50px 5px 50px;
+    color: #585858;
+}
+.QandA-bookmark{
+    padding: 0px 0px 20px 0px;
+    align-self: flex-end;
+    width: 50px;
+    float: right;
+}
+
+/*================================================================Footer================================================================*/
+.footer{
+    background:whitesmoke;
+    color: black;
+    font-size: 14px;
+    padding: 60px 10px 20px 20px;
+}
+.footer h3{
+    margin-bottom: 20px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 200px;
+    margin-bottom: 20px;
+    padding: 0px 15px 0px 15px;
+    flex-basis: 25%;
+    text-align: center;
+}
+
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+ul{
+    list-style-type: none;
+}
+.footer-col-3 a{
+    color: black;
+    text-decoration: none;
+}
+.app-logo{
+    margin: 15px;
+}
+.app-logo img{
+    width: 150px;
+    margin:5px;
+}
+.footer hr{
+    border: none;
+    background: black;
+    height: 1px;
+    margin: 20px;
+}
+.copyright{
+    text-align: center;
+}
+
+
+
+/*-----------------------------------Footer-------------------------------------------------*/
+@media only screen and (max-width:992px){
+    .footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+        text-align: center;
+        flex-basis: 50%;
+    }
+}
+@media only screen and (max-width:500px){
+    .footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+        text-align: center;
+        flex-basis: 100%;
+    }
+}

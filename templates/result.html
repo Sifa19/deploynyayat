@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <!---------------------------------------------------------------CSS-------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+
+    <!---------------------------------------------------------JavaScript Links------------------------------------------------------------>
+    <script src="{% static 'javascript/index.js' %}"></script>
+</head>
+<body>
+    
+    <div class="container-home">
+        <!------------------------------------------------------NAVIGATION BAR--------------------------------------------------------------->
+        <div class="navigation-bar">
+            <!-----------------------------------Side Navbar------------------------------------>
+        <div class="nav-bar">
+            <script src="{% static 'javascript/index.js' %}"></script>
+        <div class="home" id="myHome" id="leftdiv">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <nav class="navigation">
+                  <div class="home-account"> 
+                      <div class="home-account-img"><img src="{% static 'Images/user.png' %}" alt=""></div>
+                    <a href="#">Account</a>
+                  </div>
+                  <br>
+                    <ul>
+                        <li><a href="#">Law Categories</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">News</a></li>
+                        <!-- <li><a href="">My Whishlist</a></li> -->
+                    </ul>
+                    <hr>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                    <br>
+                    <div class="logo-nav">
+                        Nyayat
+                    </div>
+                </nav>
+        </div>
+        <span onclick="openNav()">
+            <div class="menu-logo">
+                <img src="{% static 'Images/menu3.png' %}" alt="">
+            </div>
+        </span>
+
+
+    </div>
+            
+            <div class="logo-name"><a href="#">Nyayat</a></div>
+            <div class="search-bar">
+                <form action="query" class="search-input">
+                    <div class="input-position"><input type="text" name="userquery"></div>
+                    <div class="search-position">
+                        <button type="submit" class="search-button">
+                            <img src="{% static 'Images/search1.png' %}" alt="">
+                        </button>
+                    </div>
+                </form>   
+                
+            </div>
+             <div class="user">
+                <a href="#"><img src="{% static '/Images/user.png' %}" alt=""></a>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="result-style">
+        {% for key,value in data.items %} 
+    <!-- main for loop data = results -->
+    <br>
+    <!----------------------------------------------->
+    {% if key == 'q' %}
+    <div class="sub-info">Result for Query "{{value}}"</div>
+    {% endif %}
+    <!----------------------------------------------->
+    <!-- {{value}} -->
+
+    {% if key != 'q'  %}
+    <div class="result-card">
+    {% for i,k in value.items %}
+
+    
+        <!-- sub for loop result1,result2.....resultn -->
+        
+        <!----------------------------------------------->
+        {% if i == 'title' %}
+        <!-- title in result[value]-->
+        <div class="result-title">
+            {{k}}
+        </div>
+        {% endif %}
+        <!----------------------------------------------->
+
+        <!----------------------------------------------->
+        {% if i == 'summary' %}
+        <!-- summary in result[value]-->
+        {{k}}<br>
+        {% endif %}
+        <!----------------------------------------------->
+
+
+        <!----------------------------------------------->
+        <div class="right-style">
+        {% if i == 'NOP' %}
+        <!-- No of pages in result[value]-->
+        <br><span class="pages-style">NO OF PAGES: {{k}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {% endif %}
+        {% if i == 'pdf' %}
+        <!-- pdf in result[value]-->
+        <div class="pdf-style">
+            <br><br>
+            <a href="{{k}}">view pdf</a>&nbsp;&nbsp;&nbsp;
+        </div><br>
+        {% endif %}
+        <!----------------------------------------------->
+        <!----------------------------------------------->
+        
+        </div>
+        <!----------------------------------------------->
+
+        <!----------------------------------------------->
+        {% if i == 'Judges' %} 
+        <!-- Judges in result[value] -->
+        {% if k|length > 1  %}
+        <br><span class="judges">Judges:{{k}}&nbsp;</span>
+        {% endif %}
+
+        <!-- <br><span class="judges">Judges:{{k}}&nbsp;</span> -->
+        {% endif %}
+        <!----------------------------------------------->
+
+        <!----------------------------------------------->
+        {% if i == 'Advocates' %}
+        <!-- Advocates in result[value]-->
+        {% if k|length > 1 %}
+        <br><br><span class="Advocates">Advocates: {{k}}</span>
+        {% endif %}
+
+        {% endif %}
+        <!----------------------------------------------->
+            
+    
+    {% endfor %}
+    </div>
+    {% endif %}
+
+    {% endfor %} 
+
+    </div>
+    
+</body>
+</html>

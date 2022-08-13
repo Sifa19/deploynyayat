@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyayat</title>
+    
+    
+    <!---------------------------------------------------------------CSS-------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    
+    <!---------------------------------------------------------JavaScript Links------------------------------------------------------------>
+    <script src="{% static 'javascript/index.js' %}"></script>
+</head>
+<body>
+    
+
+    <div class="container-home">
+        <!------------------------------------------------------NAVIGATION BAR--------------------------------------------------------------->
+        <div class="navigation-bar">
+            <!-----------------------------------Side Navbar------------------------------------>
+        <div class="nav-bar">
+            <script src="{% static 'javascript/index.js' %}"></script>
+        <div class="home" id="myHome" id="leftdiv">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <nav class="navigation">
+                  <div class="home-account"> 
+                      <div class="home-account-img"><img src="{% static 'Images/user.png' %}" alt=""></div>
+                    <a href="#">Account</a>
+                  </div>
+                  <br>
+                    <ul>
+                        <li><a href="#">Law Categories</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">News</a></li>
+                        <!-- <li><a href="">My Whishlist</a></li> -->
+                    </ul>
+                    <hr>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                    <br>
+                    <div class="logo-nav">
+                        Nyayat
+                    </div>
+                </nav>
+        </div>
+        <span onclick="openNav()">
+            <div class="menu-logo">
+                <img src="{% static 'Images/menu3.png' %}" alt="">
+            </div>
+        </span>
+
+
+    </div>
+            
+            <div class="logo-name"><a href="#">Nyayat</a></div>
+            <div class="search-bar">
+                <form action="query" class="search-input">
+                    <div class="input-position"><input type="text" name="userquery"></div>
+                    <div class="search-position">
+                        <button type="submit" class="search-button">
+                            <img src="{% static 'Images/search1.png' %}" alt="">
+                        </button>
+                    </div>
+                    <!-- <input type="submit"> -->
+                </form>   
+                    <!-- <div class="search-icon">
+                        <a href="#"><i class="material-icons">search</i></a>
+                    </div> -->
+                
+            </div>
+            <!-- <div class="filter">
+                <select name="" id="">
+                    <option value="ALL">ALL</option>
+                    <option value="High Court">High Court</option>
+                    <option value="Supreme Court">Supreme Court</option>
+                </select>
+            </div> -->
+             <div class="user">
+                <a href="#"><img src="{% static '/Images/user.png' %}" alt=""></a>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
